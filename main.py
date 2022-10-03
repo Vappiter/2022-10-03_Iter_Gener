@@ -32,12 +32,17 @@ class FlatIterator():
         raise StopIteration 
       
 def my_generator(lst):
-  pass
-
+  test_lst = flat_list(lst)
+  var1 = 0
+  while var1 < len(test_lst):
+    yield test_lst[var1]
+    var1 += 1
+    
 if __name__ == '__main__': 
  for item in FlatIterator(nested_list):
    print(item)
  my_flat_list = [item for item in FlatIterator(nested_list)]  
  print (my_flat_list)
- for item in flat_list(nested_list):
-   print (item)  
+test = my_generator(nested_list)
+for item1 in test:
+  print (item1)  
