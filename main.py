@@ -44,5 +44,6 @@ if __name__ == '__main__':
  my_flat_list = [item for item in FlatIterator(nested_list)]  
  print (my_flat_list)
 test = my_generator(nested_list)
+print (test)
 for item1 in test:
   print (item1)  
